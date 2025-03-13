@@ -22,6 +22,7 @@ export function GiveAttempts(): React.JSX.Element {
                 onClick={() => {
                     setAttempts(attempts - 1);
                 }}
+                disabled={attempts === 0}
             >
                 Use
             </Button>
