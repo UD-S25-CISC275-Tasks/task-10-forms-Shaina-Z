@@ -10,6 +10,7 @@ export function CheckAnswer({
     const [iscorrect, setCorrect] = useState<string>("❌");
     function updateAnswer(event: React.ChangeEvent<HTMLInputElement>) {
         setAnswer(event.target.value);
+        console.log(givenAnswer);
         if (givenAnswer === expectedAnswer) {
             setCorrect("✔️");
         }
