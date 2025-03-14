@@ -24,6 +24,8 @@ export function MultipleChoiceQuestion({
                     ))}
                 </Form.Select>
             </Form.Group>
+            {givenAnswer === expectedAnswer && <div>✔️</div>}
+            {givenAnswer !== expectedAnswer && <div>❌</div>}
         </div>
     );
 }
