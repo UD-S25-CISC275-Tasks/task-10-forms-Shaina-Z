@@ -11,22 +11,19 @@ export function EditMode(): React.JSX.Element {
     function updateStudent(event: React.ChangeEvent<HTMLInputElement>) {
         setStudent(event.target.checked);
     }
+    function updateName(event: React.ChangeEvent<HTMLInputElement>) {
+        setName(event.target.value);
+    }
     return (
         <div>
-            <Form.Check
+            <Form.Switch
                 type="switch"
                 id="in_Edit_Mode"
                 label="Edit Mode?"
                 checked={inMode}
                 onChange={updateMode}
-            />{" "}
-            <Form.Check
-                type="checkbox"
-                id="is-a-Student"
-                label="Student?"
-                checked={isStudent}
-                onChange={updateStudent}
             />
+            {studentName} is a student
         </div>
     );
 }
