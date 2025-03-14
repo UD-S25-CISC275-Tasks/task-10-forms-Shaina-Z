@@ -9,6 +9,9 @@ export function MultipleChoiceQuestion({
     expectedAnswer: string;
 }): React.JSX.Element {
     const [givenAnswer, setAnswer] = useState<string>(options[0]);
+    function updateAnswer(event: React.ChangeEvent<HTMLSelectElement>) {
+        setAnswer(event.target.value);
+    }
     return (
         <div>
             <Form.Group controlId="favoriteAnswers">
