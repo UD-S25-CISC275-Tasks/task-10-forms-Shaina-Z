@@ -9,7 +9,7 @@ export function ChangeColor(): React.JSX.Element {
     return (
         <div>
             <Form.Check
-                style={{ backgroundColor: "red;" }}
+                style={{ backgroundColor: "red" }}
                 inline
                 type="radio"
                 name="color"
@@ -20,7 +20,7 @@ export function ChangeColor(): React.JSX.Element {
                 checked={chosenColor === "red"}
             />
             <Form.Check
-                style={{ backgroundColor: "white;" }}
+                style={{ backgroundColor: "white" }}
                 inline
                 type="radio"
                 name="colors"
@@ -31,7 +31,7 @@ export function ChangeColor(): React.JSX.Element {
                 checked={chosenColor === "white"}
             />
             <Form.Check
-                style={{ backgroundColor: "teal;" }}
+                style={{ backgroundColor: "teal" }}
                 inline
                 type="radio"
                 name="colors"
@@ -42,7 +42,7 @@ export function ChangeColor(): React.JSX.Element {
                 checked={chosenColor === "teal"}
             />
             <Form.Check
-                style={{ backgroundColor: "yellow;" }}
+                style={{ backgroundColor: "yellow" }}
                 inline
                 type="radio"
                 name="colors"
@@ -53,7 +53,7 @@ export function ChangeColor(): React.JSX.Element {
                 checked={chosenColor === "yellow"}
             />
             <Form.Check
-                style={{ backgroundColor: "black;" }}
+                style={{ backgroundColor: "black" }}
                 inline
                 type="radio"
                 name="colors"
@@ -64,7 +64,7 @@ export function ChangeColor(): React.JSX.Element {
                 checked={chosenColor === "black"}
             />
             <Form.Check
-                style={{ backgroundColor: "green;" }}
+                style={{ backgroundColor: "green" }}
                 inline
                 type="radio"
                 name="colors"
@@ -75,7 +75,7 @@ export function ChangeColor(): React.JSX.Element {
                 checked={chosenColor === "green"}
             />
             <Form.Check
-                style={{ backgroundColor: "blue;" }}
+                style={{ backgroundColor: "blue" }}
                 inline
                 type="radio"
                 name="colors"
@@ -86,7 +86,7 @@ export function ChangeColor(): React.JSX.Element {
                 checked={chosenColor === "blue"}
             />
             <Form.Check
-                style={{ backgroundColor: "orange;" }}
+                style={{ backgroundColor: "orange" }}
                 inline
                 type="radio"
                 name="colors"
@@ -97,7 +97,7 @@ export function ChangeColor(): React.JSX.Element {
                 checked={chosenColor === "orange"}
             />
             <Form.Check
-                style={{ backgroundColor: "pink;" }}
+                style={{ backgroundColor: "pink" }}
                 inline
                 type="radio"
                 name="colors"
@@ -107,8 +107,13 @@ export function ChangeColor(): React.JSX.Element {
                 value="pink"
                 checked={chosenColor === "pink"}
             />
-            <span data-testid="colored-box" style={{ backgroundColor: "red" }}>
-                You have chosen {chosenColor}
+            <span>You have chosen</span>
+            <span
+                data-testid="colored-box"
+                style={{ backgroundColor: chosenColor }}
+            >
+                {" "}
+                {chosenColor}
             </span>
         </div>
     );
