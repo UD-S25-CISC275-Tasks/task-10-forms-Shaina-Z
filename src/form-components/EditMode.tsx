@@ -16,13 +16,25 @@ export function EditMode(): React.JSX.Element {
     }
     return (
         <div>
-            <Form.Switch
-                type="switch"
-                id="in_Edit_Mode"
-                label="Edit Mode?"
-                checked={inMode}
-                onChange={updateMode}
-            />
+            <div>
+                <Form.Switch
+                    type="switch"
+                    id="in_Edit_Mode"
+                    label="Edit Mode?"
+                    checked={inMode}
+                    onChange={updateMode}
+                />
+            </div>
+            <div>
+                <Form.Check
+                    hidden={!inMode}
+                    type="checkbox"
+                    id="is-student"
+                    label="Happy?"
+                    checked={isStudent}
+                    onChange={updateStudent}
+                />
+            </div>
             {studentName} is a student
         </div>
     );
