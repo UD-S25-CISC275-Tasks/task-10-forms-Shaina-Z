@@ -4,7 +4,7 @@ import { Form } from "react-bootstrap";
 export function EditMode(): React.JSX.Element {
     const [inMode, setMode] = useState<boolean>(false);
     const [studentName, setName] = useState<string>("Your Name");
-    const [isStudent, setStudent] = useState<boolean>(false);
+    const [isStudent, setStudent] = useState<boolean>(true);
     function updateMode(event: React.ChangeEvent<HTMLInputElement>) {
         setMode(event.target.checked);
     }
@@ -30,12 +30,21 @@ export function EditMode(): React.JSX.Element {
                     hidden={!inMode}
                     type="checkbox"
                     id="is-student"
-                    label="Happy?"
+                    label="Student?"
                     checked={isStudent}
                     onChange={updateStudent}
                 />
+                <Form.Group controlId="Name">
+                    <Form.Label>Enter Name:</Form.Label>
+                    <Form.Control
+                        hidden={!inMode}
+                        type="string"
+                        value={studentName}
+                        onChange={updateName}
+                    />
+                </Form.Group>
             </div>
-            {studentName} is a student
+            {studentName} {isStudent ? "is a student" : "is not a student"}
         </div>
     );
 }
